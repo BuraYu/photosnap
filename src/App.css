@@ -89,15 +89,27 @@ body {
 }
 
 .navbar__label {
-  color: var(--purewhite);
   font-weight: var(--body-font-weight);
   background-color: var(--pureblack);
   padding: 12px 24px;
+  transition: all ease-in-out 0.3s;
 }
 
 .navbar__label .navbar__lable-link {
   text-decoration: none;
   color: var(--purewhite);
+  transition: all ease-in-out 0.3s;
+}
+
+.navbar__label:hover {
+  background-color: var(--lightgrey);
+  transition: all ease-in-out 0.3s;
+}
+
+.navbar__lable-link:hover {
+  text-decoration: none;
+  color: var(--pureblack);
+  transition: all ease-in-out 0.3s;
 }
 
 /*Section CSS*/

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar__container">
@@ -5,19 +7,13 @@ const Navbar = () => {
       <div className="navbar__navigation-container">
         <ul className="navbar__navigation-list">
           <li className="navbar__navigation-item">
-            <a href="#" className="navbar__navigation-link">
-              Stories
-            </a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li className="navbar__navigation-item">
-            <a href="#" className="navbar__navigation-link">
-              Features
-            </a>
+            <NavLink to="/features">Stories</NavLink>
           </li>
           <li className="navbar__navigation-item">
-            <a href="#" className="navbar__navigation-link">
-              Pricing
-            </a>
+            <NavLink to="/pricing">Prcing</NavLink>
           </li>
         </ul>
       </div>

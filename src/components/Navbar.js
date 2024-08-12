@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "../App.css";
 
 const Navbar = () => {
   return (
@@ -7,13 +8,19 @@ const Navbar = () => {
       <div className="navbar__navigation-container">
         <ul className="navbar__navigation-list">
           <li className="navbar__navigation-item">
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" className="navbar__navigation-link">
+              Home
+            </NavLink>
           </li>
           <li className="navbar__navigation-item">
-            <NavLink to="/features">Stories</NavLink>
+            <NavLink to="/features" className="navbar__navigation-link">
+              Stories
+            </NavLink>
           </li>
           <li className="navbar__navigation-item">
-            <NavLink to="/pricing">Prcing</NavLink>
+            <NavLink to="/pricing" className="navbar__navigation-link">
+              Prcing
+            </NavLink>
           </li>
         </ul>
       </div>

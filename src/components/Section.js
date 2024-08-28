@@ -3,11 +3,21 @@ import designedForEveryone from "../assets/home/desktop/designed-for-everyone.jp
 import SectionImage from "./SectionImage";
 import SectionDescription from "./SectionDescription";
 
-const Section = () => {
+const Section = ({ layout }) => {
+  console.log(layout);
   return (
     <section className="section__container">
-      <SectionDescription />
-      <SectionImage />
+      {layout === "1" ? (
+        <>
+          <SectionDescription />
+          <SectionImage />
+        </>
+      ) : (
+        <>
+          <SectionImage />
+          <SectionDescription />
+        </>
+      )}
     </section>
   );
 };

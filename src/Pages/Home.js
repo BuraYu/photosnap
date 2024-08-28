@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      <Section />
-      <Section />
-      <Section />
+      <Section layout={"1"} />
+      <Section layout={"2"} />
+      <Section layout={"1"} />
       <Story />
       <Info />
       <Footer />

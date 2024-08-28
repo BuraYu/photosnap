@@ -141,9 +141,11 @@ body {
 .section__img {
   flex: 0 0 60%;
 }
+
 .section__img img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .section__heading {
@@ -178,4 +180,9 @@ body {
 
 .section__button:hover {
   text-decoration: underline;
+}
+
+.white {
+  color: black;
+  background-color: white;
 }

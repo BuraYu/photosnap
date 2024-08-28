@@ -3,19 +3,26 @@ import designedForEveryone from "../assets/home/desktop/designed-for-everyone.jp
 import SectionImage from "./SectionImage";
 import SectionDescription from "./SectionDescription";
 
-const Section = ({ layout }) => {
-  console.log(layout);
+const Section = ({ layout, color }) => {
+  console.log(color);
   return (
     <section className="section__container">
       {layout === "1" ? (
-        <>
-          <SectionDescription />
-          <SectionImage />
-        </>
+        color === "black" ? (
+          <>
+            <SectionDescription theme={"black"} />
+            <SectionImage />
+          </>
+        ) : (
+          <>
+            <SectionDescription theme={"white"} />
+            <SectionImage />
+          </>
+        )
       ) : (
         <>
           <SectionImage />
-          <SectionDescription />
+          <SectionDescription theme={"white"} />
         </>
       )}
     </section>

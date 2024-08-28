@@ -1,6 +1,6 @@
-import createAndShare from "../assets/home/desktop/create-and-share.jpg";
 import beatifulStories from "../assets/home/desktop/beautiful-stories.jpg";
 import designedForEveryone from "../assets/home/desktop/designed-for-everyone.jpg";
+import SectionImage from "./SectionImage";
 
 const Section = () => {
   return (
@@ -22,12 +22,7 @@ const Section = () => {
           </span>
         </div>
       </div>
-      <div className="section__img">
-        <img
-          src={createAndShare}
-          alt="Man looking at a lake with camera in hand"
-        />
-      </div>
+      <SectionImage />
     </section>
   );
 };

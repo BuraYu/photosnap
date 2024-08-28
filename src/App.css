@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   /* Base font size */
   --base-font-size: 16px;
@@ -113,3 +119,63 @@ body {
 }
 
 /*Section CSS*/
+.section__container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+.section__description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.31rem;
+  color: white;
+  flex: 0 0 40%;
+  background-color: var(--pureblack);
+  padding: 11rem 6.94rem;
+}
+
+.section__img {
+  flex: 0 0 60%;
+}
+.section__img img {
+  width: 100%;
+  height: auto;
+}
+
+.section__heading {
+  font-size: var(--heading-large-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-large-line-height);
+  letter-spacing: var(--heading-large-character-spacing);
+  text-transform: uppercase;
+}
+
+.section__description {
+  font-size: var(--body-font-size);
+  line-height: var(--body-lineheight);
+  font-weight: var(--body-font-weight);
+  color: var(--lightgrey);
+}
+
+.section__button {
+  font-size: var(--button-font-size);
+  line-height: var(--button-line-height);
+  background-color: var(--pureblack);
+  color: var(--purewhite);
+  border: none;
+  text-transform: uppercase;
+  transition: text-decoration 0.7s ease-in-out;
+  padding-right: 20px;
+}
+
+.section__button-container {
+  margin-top: 55px;
+}
+
+.section__button:hover {
+  text-decoration: underline;
+}

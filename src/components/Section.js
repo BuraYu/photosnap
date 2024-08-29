@@ -1,51 +1,57 @@
 import createAndShare from "../assets/home/desktop/create-and-share.jpg";
-import beatifulStories from "../assets/home/desktop/beautiful-stories.jpg";
+import beautifulStories from "../assets/home/desktop/beautiful-stories.jpg";
 import designedForEveryone from "../assets/home/desktop/designed-for-everyone.jpg";
 
 import SectionImage from "./SectionImage";
 import SectionDescription from "./SectionDescription";
 
 const Section = ({ layout, color }) => {
-  let description = [
+  const descriptions = [
     {
-      heading: "Create and share your photo stories. ",
+      heading: "Create and share your photo stories.",
       paragraph:
-        "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.",
+        "Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories, and connect with others.",
     },
     {
-      heading: "Beatiful stories every time",
+      heading: "Beautiful stories every time",
       paragraph:
-        "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.",
+        "We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps, and media from other networks. Then share your story with everyone.",
     },
     {
       heading: "Designed for everyone",
       paragraph:
-        "Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. ",
+        "Photosnap can help you create stories that resonate with your audience. Our tool is designed for photographers of all levels, brands, businesses—you name it.",
     },
   ];
 
-  return (
-    <section className="section__container">
-      {layout === "1" ? (
-        color === "black" ? (
+  const getContent = () => {
+    if (layout === "1") {
+      if (color === "black") {
+        return (
           <>
-            <SectionDescription theme={"black"} content={description[0]} />
+            <SectionDescription theme="black" content={descriptions[0]} />
             <SectionImage content={createAndShare} />
           </>
-        ) : (
+        );
+      } else {
+        return (
           <>
-            <SectionDescription theme={"white"} content={description[2]} />
+            <SectionDescription theme="white" content={descriptions[2]} />
             <SectionImage content={designedForEveryone} />
           </>
-        )
-      ) : (
+        );
+      }
+    } else {
+      return (
         <>
-          <SectionImage content={beatifulStories} />
-          <SectionDescription theme={"white"} content={description[1]} />
+          <SectionImage content={beautifulStories} />
+          <SectionDescription theme="white" content={descriptions[1]} />
         </>
-      )}
-    </section>
-  );
+      );
+    }
+  };
+
+  return <section className="section__container">{getContent()}</section>;
 };
 
 export default Section;

@@ -1,12 +1,7 @@
-import createAndShare from "../assets/home/desktop/create-and-share.jpg";
-
-const SectionImage = () => {
+const SectionImage = ({ content }) => {
   return (
     <div className="section__img">
-      <img
-        src={createAndShare}
-        alt="Man looking at a lake with camera in hand"
-      />
+      <img src={content} alt="Man looking at a lake with camera in hand" />
     </div>
   );
 };

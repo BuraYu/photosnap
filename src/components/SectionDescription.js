@@ -1,4 +1,4 @@
-const SectionDescription = ({ theme }) => {
+const SectionDescription = ({ theme, content }) => {
   console.log(theme);
   const buttonClass =
     theme === "white" ? `section__button ${theme}` : "section__button";
@@ -13,11 +13,8 @@ const SectionDescription = ({ theme }) => {
 
   return (
     <div className={sectionContainer}>
-      <h1 className="section__heading">create and share your photo stories.</h1>
-      <p className={sectionDescription}>
-        Photosnap is a platform for photographers and visual storytellers. We
-        make it easy to share photos, tell stories and connect with others.
-      </p>
+      <h1 className="section__heading">{content.heading}</h1>
+      <p className={sectionDescription}>{content.paragraph}</p>
       <div className="section__button-container">
         <button className={buttonClass} aria-label="Get an Invite">
           Get an Invite
